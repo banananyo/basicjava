@@ -46,7 +46,7 @@ public class NumberFormatDemo2 {
         System.out.println("3. DecimalFormat with ,: " + number);
 
         // use of % for percentage
-        numFormat = new DecimalFormat("%");
+        numFormat = new DecimalFormat("#%");
         number = numFormat.format(0.15);
         System.out.println("4. DecimalFormat with percentage: " + number);
 

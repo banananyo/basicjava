@@ -1,4 +1,4 @@
-package com.basic.serialization;
+package com.basic.IO.serialization;
 
 public class Employee implements java.io.Serializable {
     public String name;
