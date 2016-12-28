@@ -1,4 +1,4 @@
-package com.basic.serialization;
+package com.basic.IO.serialization;
 
 import java.io.*;
 public class SerializeDemo {
@@ -11,8 +11,9 @@ public class SerializeDemo {
         e.number = 101;
 
         try {
+            String path="/home/baze/IdeaProjects/basic_java/src/com/basic/IO/serialization/employee.ser";
             FileOutputStream fileOut =
-                    new FileOutputStream("/home/baze/IdeaProjects/basic_java/src/com/basic/serialization/employee.ser");
+                    new FileOutputStream(path);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(e);
             out.close();

@@ -1,13 +1,13 @@
 package com.basic.IO.ByteArrayInputStream;
 
 import java.io.*;
-public class ByteStreamTest {
+public class ByteArrayStreamTest {
 
     public static void main(String args[])throws IOException {
         ByteArrayOutputStream bOutput = new ByteArrayOutputStream(12);
-        String str = "hello";
+        String str = "hello beautiful world";
         int len = str.length();
-        while( bOutput.size()!= len ) {
+        while( bOutput.size()<len ) {
             // Gets the inputs from the user
             bOutput.write(str.getBytes());
         }

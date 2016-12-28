@@ -1,4 +1,4 @@
-package com.basic.serialization;
+package com.basic.IO.serialization;
 
 import java.io.*;
 public class DeserializeDemo {
@@ -6,7 +6,8 @@ public class DeserializeDemo {
     public static void main(String [] args) {
         Employee e = null;
         try {
-            FileInputStream fileIn = new FileInputStream("/home/baze/IdeaProjects/basic_java/src/com/basic/serialization/employee.ser");
+            String path="/home/baze/IdeaProjects/basic_java/src/com/basic/IO/serialization/employee.ser";
+            FileInputStream fileIn = new FileInputStream(path);
             ObjectInputStream in = new ObjectInputStream(fileIn);
             e = (Employee) in.readObject();
             in.close();

@@ -26,25 +26,25 @@ public class AssignmentTest {
 
         a = 10;
         c = 15;
-        c %= a ;
+        c %= a ; //5
         System.out.println("c %= a  = " + c );
 
-        c <<= 2 ;
+        c <<= 2 ; //20
         System.out.println("c <<= 2 = " + c );
 
-        c >>= 2 ;
+        c >>= 2 ; //5
         System.out.println("c >>= 2 = " + c );
 
-        c >>= 2 ;
+        c >>= 2 ; //1
         System.out.println("c >>= 2 = " + c );
 
-        c &= a ;
+        c &= a ; // c = 0001 & 1010 = 0000
         System.out.println("c &= a  = " + c );
 
-        c ^= a ;
+        c ^= a ; // c = 0000 ^ 1010 = 1010
         System.out.println("c ^= a   = " + c );
 
-        c |= a ;
+        c |= a ; // c = 1010 | 1010 = 1010
         System.out.println("c |= a   = " + c );
     }
 }

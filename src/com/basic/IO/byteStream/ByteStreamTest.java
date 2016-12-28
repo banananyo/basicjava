@@ -6,16 +6,17 @@ public class ByteStreamTest {
     public static void main(String args[]) throws IOException {
         FileInputStream in = null;
         FileOutputStream out = null;
-        //int count=0;
+        int count=0;
         try {
-            in = new FileInputStream("/home/baze/IdeaProjects/basic_java/src/com/basic/IO/byteStream/input.txt");
-            out = new FileOutputStream("/home/baze/IdeaProjects/basic_java/src/com/basic/IO/byteStream/output.txt");
+            String path="/home/baze/IdeaProjects/basic_java/src/com/basic/IO/byteStream/";
+            in = new FileInputStream(path+"input.txt");
+            out = new FileOutputStream(path+"output.txt");
             int c;
-            byte[] b = new byte[1024];
-            while ((c = in.read()) != -1) {
+            byte[] b = new byte[2]; // 2 byte per round
+            while ((c = in.read(b)) != -1) {
                 out.write(c);
-                //System.out.println(c);
-                //count++;
+                System.out.println(c);
+                count++;
             }
         }finally {
             if (in != null) {
@@ -24,7 +25,7 @@ public class ByteStreamTest {
             if (out != null) {
                 out.close();
             }
-            //System.out.println(count);
+            System.out.println(count);
         }
     }
 }
